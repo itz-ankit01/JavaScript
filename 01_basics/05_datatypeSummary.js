@@ -42,3 +42,29 @@ const myFunction = function(){
 
 // link to Study
 // https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
+// Memory
+// Stack(Primitive) Heap(Non Primitive)
+
+let myYoutubeName = "hiteshchoudharydotcom"
+
+let anotherName = myYoutubeName;
+
+anotherName = "AnkitAgnihotri";
+
+console.log(myYoutubeName);
+console.log(anotherName);
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne;
+
+userTwo.email = "Ankit@goole.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
