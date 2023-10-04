@@ -43,3 +43,44 @@ function loginUserMessage(username = "Sam"){
 // console.log(loginUserMessage("Ankit"));
 // console.log(loginUserMessage(""));
 // console.log(loginUserMessage());
+
+
+//shopping cart
+
+function calculateCartPrice (val1, val2, ...num1){
+    return num1;
+}
+
+// console.log(calculateCartPrice(200, 400, 500, 2200));  // it will return an array [ 200, 400, 500 ]
+
+const user = {
+    username: "Ankit",
+    price: 199
+}
+
+function handleObject(anyobject){
+    console.log(`username is ${anyobject.username} and price is ${anyobject.price}`);
+}
+
+// handleObject(user);
+
+// passing objeect as argument in the function
+
+handleObject({
+    username: "Sam",
+    price: 399
+});
+
+
+//  passing array as argument in the function
+
+const myArray = [100, 200, 300, 400];
+
+function returnSecondValue(getArray){
+    return getArray[1];
+}
+
+// console.log(returnSecondValue(myArray));
+// console.log(returnSecondValue([100, 235, 663]));
+
+
