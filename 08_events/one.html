@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""  ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+
+<script>
+    // this methods gives less feature so we use eventListener
+    // document.getElementById('owl').onclick = function(){
+    //     alert("Owl Clicked")
+    // }
+
+    // attachEvent() also used
+    // jQuery - On
+
+
+    // TO STUDY
+    // type, timeStamp, defaultPrevented
+    // target, toElement, srcElement, currentElement
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keycode
+
+    // false => Owl clicked  (Bubbling event)
+    //          Clicked inside the ul
+    // like a bubble neeche se uppar
+
+    // true => Clicked inside the ul   (capturing event)
+    //         Owl clicked
+    // upar se neeche
+
+    // document.getElementById('images').addEventListener('click', function(e){
+    //     console.log("Clicked inside the ul");
+    // }, false)
+
+    // document.getElementById('owl').addEventListener('click', function(e){
+    //     console.log("Owl clicked ");
+    //     // console.log(e.x);     // dimension in x
+    //     // console.log(e.timeStamp);   // timestamp
+    //     e.stopPropagation()      // rok deta h propogation like e.defaultPrevented  only print owl clicked
+    // }, false)
+
+    // document.getElementById('google').addEventListener('click', function(e){
+    //     e.preventDefault();         // remember little difference with defaultPrevented()
+    //     e.stopPropagation();
+    //     console.log('Google clicked');
+    // }, false)
+
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        // console.log(e.target);      // e.target = kis target se ye event occur ho raha hai
+        console.log(e.target.tagName);  // it will give the <li>...</li>
+        e.preventDefault() // google link open hone se rokne kliye
+        if(e.target.tagName === 'IMG' || 'A'){
+            console.log(e.target.id);
+            let removeIt = e.target.parentNode;
+            removeIt.remove()
+        }
+        
+        
+        // removeIt.parentNode.removeChild(removeIt)        // second method to remove li->ul->li.delete
+
+    }, false)
+</script>
+
+</body>
+</html>
