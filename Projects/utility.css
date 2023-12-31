@@ -1,0 +1,37 @@
+.border{
+    border: 2px solid red;
+    margin: 3px;
+}
+
+.flex{
+    display: flex;
+}
+
+.justify-content{
+    justify-content: center;
+}
+
+.items-center{
+    align-items: center;
+}
+
+/* For Webkit Browsers (like Chrome and Safari) */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the vertical scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #333; /* Color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #555; /* Color of the scrollbar thumb */
+    border-radius: 5px; /* Rounded corners */
+    border: 2px solid #333; /* Border around the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #777; /* Darker color on hover */
+}
+
+
